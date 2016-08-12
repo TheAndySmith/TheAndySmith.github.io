@@ -167,6 +167,43 @@ video {
     margin-top: 0.33em;
   }
 }
+#page-popup-wrapper {
+  display: none;
+}
+@media screen {
+  html {
+    overflow-y: scroll;
+  }
+  html.popup-open {
+    overflow-y: hidden;
+  }
+  html.popup-open #page-main {
+    overflow-y: scroll;
+  }
+  html.popup-open #page-popup-container {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.67);
+    color: #fff;
+  }
+  #page-popup-container > img {
+    display: block;
+    box-sizing: border-box;
+    max-width: 80%;
+    margin: 10px auto;
+    padding: 5px;
+    background: #fff;
+    border: solid 1px #666;
+    border-radius: 6px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  }
+}
 #page-main > header {
   text-align: center;
   font-size: 120%;
