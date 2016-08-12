@@ -67,8 +67,15 @@ video {
     color: #333;
     font-family: "Arial", "Helvetica", sans-serif;
     font-size: 13px;
-    line-height: 125%;
+    line-height: 140%;
   }
+}
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen {
   :link,
   :visited {
     text-decoration: none;
@@ -87,14 +94,32 @@ video {
   :visited {
     color: #6e25b6;
   }
-  #page-content ul {
-    margin: 1em 0;
-    padding: 0 0 0 2em;
-  }
-  #page-content ul > li {
-    margin: 0;
-    padding: 0;
-  }
+}
+#page-content ul {
+  margin: 1em 0;
+  padding: 0 0 0 2em;
+}
+#page-content ul > li {
+  margin: 0;
+  padding: 0;
+}
+#page-content h1,
+#page-content h2,
+#page-content h3,
+#page-content h4,
+#page-content h5,
+#page-content h6 {
+  margin: 1.5em 0 0.5em 0;
+}
+#page-content h1 + *,
+#page-content h2 + *,
+#page-content h3 + *,
+#page-content h4 + *,
+#page-content h5 + *,
+#page-content h6 + * {
+  margin-top: 0;
+}
+@media screen {
   #page-content h1,
   #page-content h2,
   #page-content h3,
@@ -154,8 +179,7 @@ video {
 }
 @media only screen and (min-width: 800px) {
   #page-main > header {
-    padding-top: 3em;
-    padding-bottom: 1.5em;
+    padding-top: 2.5em;
   }
 }
 #page-main > header > h1 {
@@ -167,7 +191,7 @@ video {
 }
 @media screen {
   #page-main > header {
-    background-image: linear-gradient(0deg, #3535b4, #1e1e65 4%, #101036);
+    background-image: radial-gradient(ellipse farthest-corner at bottom center, transparent, transparent 75%, #0c0c2a), linear-gradient(0deg, #3535b4, #1e1e65 4%, #101036);
     text-shadow: 0 0 12px rgba(255, 255, 255, 0.33), 1px 1px 2px rgba(0, 0, 0, 0.75);
   }
   #page-main > header > h1 {
@@ -191,10 +215,12 @@ video {
     margin: 0;
     padding: 1.5em 0;
     border-top: dotted 1px #c6c6a2;
+    background-image: radial-gradient(ellipse 33% 6px at top center, rgba(198, 198, 162, 0.4), transparent);
   }
   #page-content.portfolio > section:first-child {
     padding-top: 0;
     border-top: none;
+    background-image: none;
   }
   #page-content.portfolio > section:last-child {
     padding-bottom: 0;
@@ -288,6 +314,7 @@ video {
 }
 @media screen {
   #page-content.portfolio > section > .images > ul > li > a > img {
+    border-radius: 1px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   }
 }
