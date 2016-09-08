@@ -1,0 +1,1082 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+[hidden],
+template {
+  display: none;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img,
+a img {
+  border: 0;
+}
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+::-moz-selection,
+::-moz-selection {
+  text-shadow: none ! important;
+}
+::selection,
+::-moz-selection {
+  text-shadow: none ! important;
+}
+html,
+body {
+  font-family: "Verdana", sans-serif;
+  font-size: 13px;
+  line-height: 140%;
+}
+@media screen {
+  html,
+  body {
+    background: #1e1e22;
+    color: #f2f2f2;
+  }
+  :link,
+  :visited {
+    color: #2089ff;
+    text-decoration: none;
+    transition: text-shadow 0.25s;
+  }
+  :link:hover,
+  :visited:hover,
+  :link:focus,
+  :visited:focus,
+  :link:active,
+  :visited:active {
+    text-decoration: underline;
+    text-shadow: 0 0 4px rgba(32, 137, 255, 0.33);
+  }
+}
+ul,
+ol {
+  margin: 1em 0;
+  padding: 0 0 0 1.5em;
+}
+ul > li,
+ol > li {
+  margin: 0;
+  padding: 0;
+}
+@media screen {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media screen {
+  .elrt-app > header {
+    padding: 0.75rem 1rem;
+    margin: 0 0 0.75rem 0;
+  }
+}
+@media screen {
+  .elrt-app > section {
+    padding: 0.75rem 1rem;
+  }
+}
+@media only screen and (min-width:  768px ) {
+  .elrt-app {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    height: 100vh;
+  }
+  .elrt-app > header {
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none;
+  }
+  .elrt-app > .scene {
+    -webkit-flex: auto 1 1;
+        -ms-flex: auto 1 1;
+            flex: auto 1 1;
+    min-height: 250px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .elrt-app > .scene > .render-display {
+    -webkit-flex: 70% 1 1;
+        -ms-flex: 70% 1 1;
+            flex: 70% 1 1;
+  }
+  .elrt-app > .scene > aside {
+    -webkit-flex: 30% 1 1;
+        -ms-flex: 30% 1 1;
+            flex: 30% 1 1;
+    min-width: 20em;
+    margin: 0 0 0 0.5rem;
+    padding: 0 0.5rem;
+    overflow-y: auto;
+  }
+}
+@media screen {
+  .elrt-app > header {
+    background-color: #f60;
+    color: #fff;
+    background-image: linear-gradient(#d63900, #f60);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.9);
+  }
+  .elrt-app > header :link,
+  .elrt-app > header :visited {
+    color: inherit;
+    text-shadow: none;
+    transition: none;
+  }
+}
+@media screen {
+  .elrt-app > header > h1 {
+    margin: 0;
+    font-size: 133%;
+    font-weight: inherit;
+    text-shadow: 0 0 5px rgba(87, 35, 0, 0.5);
+  }
+}
+@media screen {
+  .elrt-app > header > .selected-scene {
+    margin-top: 0.375rem;
+    text-align: right;
+  }
+  .elrt-app > header > .selected-scene > * {
+    margin: 0;
+    display: inline;
+  }
+  .elrt-app > header > .selected-scene > .p-current-scene {
+    font-weight: bold;
+  }
+  .elrt-app > header > .selected-scene > .p-select-scene {
+    font-size: 85%;
+  }
+  .elrt-app > header > .selected-scene > .p-select-scene::before {
+    content: "(";
+  }
+  .elrt-app > header > .selected-scene > .p-select-scene::after {
+    content: ")";
+  }
+}
+@media only screen and (min-width:  480px ) {
+  .elrt-app > header {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    min-height: 3em;
+  }
+  .elrt-app > header > h1 {
+    -webkit-flex: auto 1 1;
+        -ms-flex: auto 1 1;
+            flex: auto 1 1;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    white-space: nowrap;
+  }
+  .elrt-app > header > .selected-scene {
+    -webkit-flex: auto 0 1;
+        -ms-flex: auto 0 1;
+            flex: auto 0 1;
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+    margin: 0 0 0 1em;
+  }
+  .elrt-app > header > .selected-scene > * {
+    display: block;
+  }
+  .elrt-app > header > .selected-scene > .p-select-scene::before,
+  .elrt-app > header > .selected-scene > .p-select-scene::after {
+    content: none;
+  }
+}
+@media screen {
+  .elrt-app > section > h2 {
+    margin: 0 0 0.5em 0;
+    color: #f60;
+    font-size: 133%;
+    font-weight: normal;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  }
+}
+@media screen {
+  .app-loading-message > p {
+    margin: 0;
+  }
+}
+@media screen {
+  input[type="text"],
+  input[type="number"] {
+    background: #36363d;
+    color: #f2f2f2;
+    border: none;
+    padding: 0.1em 0.3em;
+    border-radius: 2px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.75);
+    transition: box-shadow 0.25s;
+  }
+  input[type="text"]:hover,
+  input[type="number"]:hover {
+    box-shadow: 0 0 3px 1px rgba(135, 135, 149, 0.75);
+  }
+  input[type="text"]:focus,
+  input[type="number"]:focus {
+    box-shadow: 0 0 4px 1px rgba(181, 181, 189, 0.75);
+  }
+}
+.select-scene ul {
+  margin: 0;
+  padding: 0;
+}
+.select-scene ul > li {
+  display: block;
+  list-style: none;
+}
+.select-scene > ul > li {
+  margin: 0 0 0.75rem 0;
+}
+.select-scene > ul > li:last-child {
+  margin-bottom: 0;
+}
+.select-scene > ul > li > h3 {
+  margin: 0;
+  font-size: 100%;
+  font-weight: bold;
+}
+.select-scene > ul > li > ul > li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+@media screen {
+  .select-scene > ul > li > ul {
+    -webkit-columns: 14em auto;
+       -moz-columns: 14em auto;
+            columns: 14em auto;
+    -webkit-column-gap: 1.5em;
+       -moz-column-gap: 1.5em;
+            column-gap: 1.5em;
+  }
+  .select-scene > ul > li > ul > li {
+    -webkit-column-break-inside: avoid;
+       page-break-inside: avoid;
+            break-inside: avoid;
+  }
+}
+@media screen {
+  .scene > aside {
+    margin: 0.75rem 0 0 0;
+  }
+}
+@media screen {
+  .scene > aside > section > h2 {
+    margin: 0 0 0.5em 0;
+    color: #f60;
+    font-size: 133%;
+    font-weight: normal;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  }
+}
+.scene > aside > section > h2 + p {
+  margin-top: 0;
+}
+.scene > aside > section > p:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (max-width:  767px ) {
+  .scene > .render-display {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: solid 1px #666669;
+  }
+}
+@media screen {
+  .render-display > h2 {
+    margin: 0 0 0.5em 0;
+    color: #f60;
+    font-size: 133%;
+    font-weight: normal;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  }
+}
+@media screen {
+  .render-display {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  .render-display > h2 {
+    display: none;
+  }
+  .render-display > figure {
+    -webkit-flex: auto 1 1;
+        -ms-flex: auto 1 1;
+            flex: auto 1 1;
+    margin: 0 0 0.75rem 0;
+  }
+  .render-display > figure > canvas {
+    width: 100%;
+    height: auto;
+    background: #000;
+    box-shadow: 0 0 2px 1px rgba(242, 242, 242, 0.33), 0 0 8px 2px rgba(0, 0, 0, 0.8);
+  }
+  .render-display > aside {
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .render-display > aside > .p-status {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    font-size: 85%;
+    margin-right: 1rem;
+  }
+  .render-display > aside > .p-status.v-error {
+    color: #f99;
+  }
+  .render-display > aside > .p-controls {
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none;
+  }
+  .render-display > aside > .p-controls input {
+    width: 3em;
+  }
+}
+@media only screen and (min-width:  768px ) {
+  .render-display > figure {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    min-height: 0;
+  }
+  .render-display > figure > canvas {
+    -webkit-flex: 100% 1 1;
+        -ms-flex: 100% 1 1;
+            flex: 100% 1 1;
+    min-height: 0;
+  }
+}
+.parameter-list {
+  margin: 0;
+  padding: 0;
+}
+.parameter-list > li {
+  display: block;
+  list-style: none;
+  margin: 0.5em 0;
+}
+.parameter.parameter-group > h3 {
+  margin: 0;
+  font-size: 100%;
+  font-weight: bold;
+}
+.parameter.parameter-group > .parameter-list {
+  margin-left: 1.5em;
+}
+@media screen {
+  .parameter.parameter-group > h3 > a {
+    color: inherit;
+    text-decoration: none;
+    text-shadow: none;
+    transition: none;
+    display: block;
+    position: relative;
+    background: #42424b;
+    padding: 0.1em 0.2em 0.1em 1.5em;
+    border-radius: 3px;
+    box-shadow: none;
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.25s;
+  }
+  .parameter.parameter-group > h3 > a:hover,
+  .parameter.parameter-group > h3 > a:focus,
+  .parameter.parameter-group > h3 > a:active {
+    text-decoration: none;
+    text-shadow: none;
+  }
+  .parameter.parameter-group > h3 > a:hover,
+  .parameter.parameter-group > h3 > a:focus,
+  .parameter.parameter-group > h3 > a:active {
+    background: #5a5a66;
+    box-shadow: 0 0 3px 1px rgba(148, 148, 161, 0.25);
+  }
+  .parameter.parameter-group > h3 > a:focus {
+    box-shadow: 0 0 4px 1px rgba(194, 194, 201, 0.33);
+  }
+  .parameter.parameter-group > h3 > a::before {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1.5em;
+    padding: 0.1em 0;
+    text-align: center;
+    font-weight: normal;
+  }
+  .parameter.parameter-group.v-collapsed > h3 > a::before {
+    content: "▹";
+  }
+  .parameter.parameter-group.v-collapsed > h3 > a:hover::before,
+  .parameter.parameter-group.v-collapsed > h3 > a:focus::before,
+  .parameter.parameter-group.v-collapsed > h3 > a:active::before {
+    content: "▸";
+  }
+  .parameter.parameter-group.v-expanded {
+    border-bottom: solid 1px #2a2a30;
+  }
+  .parameter.parameter-group.v-expanded > h3 > a::before {
+    content: "▿";
+  }
+  .parameter.parameter-group.v-expanded > h3 > a:hover::before,
+  .parameter.parameter-group.v-expanded > h3 > a:focus::before,
+  .parameter.parameter-group.v-expanded > h3 > a:active::before {
+    content: "▾";
+  }
+}
+@media screen {
+  .parameter.parameter-unsupported {
+    color: #f99;
+  }
+}
+@media screen {
+  .parameter.parameter-boolean > label {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+  .parameter.parameter-boolean > label > .p-checkbox {
+    -webkit-flex: auto 0 0;
+        -ms-flex: auto 0 0;
+            flex: auto 0 0;
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+    margin-right: 0.75em;
+  }
+  .parameter.parameter-boolean > label > .p-label {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+  }
+}
+@media screen {
+  .parameter.parameter-choice > .p-label {
+    display: block;
+    margin: 0 0 0.25em 0;
+  }
+  .parameter.parameter-choice > .p-input {
+    display: block;
+    margin: 0.25em 0 0 1.5em;
+    color: #bdbdbe;
+  }
+}
+.parameter.parameter-choice > .p-input {
+  padding: 0;
+}
+.parameter.parameter-choice > .p-input > li {
+  display: block;
+  list-style: none;
+  margin: 0.25em 0;
+}
+@media screen {
+  .parameter.parameter-choice > .p-input > li > label {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+  .parameter.parameter-choice > .p-input > li > label > .p-checkbox {
+    -webkit-flex: auto 0 0;
+        -ms-flex: auto 0 0;
+            flex: auto 0 0;
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+    margin-right: 0.75em;
+  }
+  .parameter.parameter-choice > .p-input > li > label > .p-label {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+  }
+}
+@media screen {
+  .parameter.parameter-number > label {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .parameter.parameter-number > label > .p-label {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-right: 0.75em;
+  }
+  .parameter.parameter-number > label > .p-input {
+    -webkit-flex: 8em 0 0;
+        -ms-flex: 8em 0 0;
+            flex: 8em 0 0;
+    color: #bdbdbe;
+  }
+}
+@media screen {
+  .parameter.parameter-number > label > .p-input > input {
+    width: 4.5em;
+  }
+}
+@media screen {
+  .parameter.parameter-vector > .p-label {
+    display: block;
+    margin: 0 0 0.25em 0;
+  }
+  .parameter.parameter-vector > .p-input {
+    display: block;
+    margin: 0.25em 0 0 1.5em;
+    color: #bdbdbe;
+  }
+}
+.parameter.parameter-vector > ol {
+  margin: 0;
+  padding: 0;
+}
+.parameter.parameter-vector > ol > li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 0.75em 0 0;
+}
+.parameter.parameter-vector > ol > li > label > input {
+  width: 4.5em;
+}
+@media screen {
+  .parameter.parameter-rgb > label {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .parameter.parameter-rgb > label > .p-label {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-right: 0.75em;
+  }
+  .parameter.parameter-rgb > label > .p-input {
+    -webkit-flex: 8em 0 0;
+        -ms-flex: 8em 0 0;
+            flex: 8em 0 0;
+    color: #bdbdbe;
+  }
+}
+@media screen {
+  .parameter.parameter-rgb > label > .p-input > input {
+    width: 4em;
+  }
+}
+@media screen {
+  .parameter.parameter-random-seed > .p-label {
+    display: block;
+    margin: 0 0 0.25em 0;
+  }
+  .parameter.parameter-random-seed > .p-input {
+    display: block;
+    margin: 0.25em 0 0 1.5em;
+    color: #bdbdbe;
+  }
+}
+.parameter.parameter-random-seed > .p-input {
+  padding: 0;
+}
+.parameter.parameter-random-seed > .p-input > li {
+  display: block;
+  list-style: none;
+  margin: 0.25em 0;
+}
+@media screen {
+  .parameter.parameter-random-seed > .p-input > li.p-seed-fixed,
+  .parameter.parameter-random-seed > .p-input > li.p-seed-auto > label {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+  .parameter.parameter-random-seed > .p-input > li.p-seed-fixed > .p-checkbox,
+  .parameter.parameter-random-seed > .p-input > li.p-seed-auto > label > .p-checkbox {
+    -webkit-flex: auto 0 0;
+        -ms-flex: auto 0 0;
+            flex: auto 0 0;
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+    margin-right: 0.75em;
+  }
+  .parameter.parameter-random-seed > .p-input > li.p-seed-fixed > .p-label,
+  .parameter.parameter-random-seed > .p-input > li.p-seed-auto > label > .p-label {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+  }
+}
+.parameter.parameter-random-seed > .p-input input[type="number"] {
+  width: 4.5em;
+}
+@media screen {
+  .parameter.parameter-transform > .p-label {
+    display: block;
+    margin: 0 0 0.25em 0;
+  }
+  .parameter.parameter-transform > .p-input {
+    display: block;
+    margin: 0.25em 0 0 1.5em;
+    color: #bdbdbe;
+  }
+}
+@media screen {
+  .parameter.parameter-transform > ul.p-input {
+    padding: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .parameter.parameter-transform > ul.p-input > li {
+    display: block;
+    list-style: none;
+    margin: 0.25em 0.75em 0.25em 0;
+  }
+  .parameter.parameter-transform > ul.p-input > li:last-child {
+    margin-right: 0;
+  }
+  .parameter.parameter-transform > ul.p-input > li.p-rotate > p,
+  .parameter.parameter-transform > ul.p-input > li.p-translate > p,
+  .parameter.parameter-transform > ul.p-input > li.p-scale-uniform > p,
+  .parameter.parameter-transform > ul.p-input > li.p-scale-nonuniform > p {
+    margin: 0 0 0.25em 0;
+  }
+  .parameter.parameter-transform > ul.p-input > li.p-rotate > ul,
+  .parameter.parameter-transform > ul.p-input > li.p-translate > ul,
+  .parameter.parameter-transform > ul.p-input > li.p-scale-uniform > ul,
+  .parameter.parameter-transform > ul.p-input > li.p-scale-nonuniform > ul {
+    margin: 0.25em 0;
+    padding: 0;
+  }
+  .parameter.parameter-transform > ul.p-input > li.p-rotate > ul > li,
+  .parameter.parameter-transform > ul.p-input > li.p-translate > ul > li,
+  .parameter.parameter-transform > ul.p-input > li.p-scale-uniform > ul > li,
+  .parameter.parameter-transform > ul.p-input > li.p-scale-nonuniform > ul > li {
+    display: block;
+    list-style: none;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    overflow: hidden;
+  }
+  .parameter.parameter-transform > ul.p-input > li.p-rotate > ul > li > a,
+  .parameter.parameter-transform > ul.p-input > li.p-translate > ul > li > a,
+  .parameter.parameter-transform > ul.p-input > li.p-scale-uniform > ul > li > a,
+  .parameter.parameter-transform > ul.p-input > li.p-scale-nonuniform > ul > li > a {
+    display: block;
+    text-indent: -10000px;
+    text-decoration: none;
+  }
+  .parameter.parameter-transform > ul.p-input > li.p-rotate > ul > li > a::before,
+  .parameter.parameter-transform > ul.p-input > li.p-translate > ul > li > a::before,
+  .parameter.parameter-transform > ul.p-input > li.p-scale-uniform > ul > li > a::before,
+  .parameter.parameter-transform > ul.p-input > li.p-scale-nonuniform > ul > li > a::before {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-indent: 0;
+    text-align: center;
+    line-height: 2em;
+    color: #2089ff;
+    border-radius: 3px;
+    transition-property: color, background-color;
+    transition-duration: 0.25s;
+  }
+  .parameter.parameter-transform > ul.p-input > li.p-rotate > ul > li > a:hover::before,
+  .parameter.parameter-transform > ul.p-input > li.p-translate > ul > li > a:hover::before,
+  .parameter.parameter-transform > ul.p-input > li.p-scale-uniform > ul > li > a:hover::before,
+  .parameter.parameter-transform > ul.p-input > li.p-scale-nonuniform > ul > li > a:hover::before,
+  .parameter.parameter-transform > ul.p-input > li.p-rotate > ul > li > a:focus::before,
+  .parameter.parameter-transform > ul.p-input > li.p-translate > ul > li > a:focus::before,
+  .parameter.parameter-transform > ul.p-input > li.p-scale-uniform > ul > li > a:focus::before,
+  .parameter.parameter-transform > ul.p-input > li.p-scale-nonuniform > ul > li > a:focus::before,
+  .parameter.parameter-transform > ul.p-input > li.p-rotate > ul > li > a:active::before,
+  .parameter.parameter-transform > ul.p-input > li.p-translate > ul > li > a:active::before,
+  .parameter.parameter-transform > ul.p-input > li.p-scale-uniform > ul > li > a:active::before,
+  .parameter.parameter-transform > ul.p-input > li.p-scale-nonuniform > ul > li > a:active::before {
+    color: #c8e2ff;
+    background-color: rgba(32, 137, 255, 0.2);
+  }
+  .parameter.parameter-transform > ul.p-input > li.p-reset {
+    margin: 0.25em 0 0 0;
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-rotate > ul {
+    position: relative;
+    width: 4.25em;
+    height: 2em;
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-rotate > ul > li.p-rotate-acw {
+    left: 0em;
+    top: 0em;
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-rotate > ul > li.p-rotate-acw > a::before {
+    content: "↺";
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-rotate > ul > li.p-rotate-cw {
+    left: 2.25em;
+    top: 0em;
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-rotate > ul > li.p-rotate-cw > a::before {
+    content: "↻";
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-translate > ul {
+    position: relative;
+    width: 6.5em;
+    height: 4.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-translate > ul > li.p-translate-x-pos {
+    left: 4.5em;
+    top: 2.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-translate > ul > li.p-translate-x-pos > a::before {
+    content: "→";
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-translate > ul > li.p-translate-x-neg {
+    left: 0em;
+    top: 2.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-translate > ul > li.p-translate-x-neg > a::before {
+    content: "←";
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-translate > ul > li.p-translate-y-pos {
+    left: 2.25em;
+    top: 0em;
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-translate > ul > li.p-translate-y-pos > a::before {
+    content: "↑";
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-translate > ul > li.p-translate-y-neg {
+    left: 2.25em;
+    top: 2.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-translate > ul > li.p-translate-y-neg > a::before {
+    content: "↓";
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-scale-uniform > ul {
+    position: relative;
+    width: 4.25em;
+    height: 2em;
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-scale-uniform > ul > li.p-scale-uniform-inc {
+    left: 0em;
+    top: 0em;
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-scale-uniform > ul > li.p-scale-uniform-inc > a::before {
+    content: "+";
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-scale-uniform > ul > li.p-scale-uniform-dec {
+    left: 2.25em;
+    top: 0em;
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-scale-uniform > ul > li.p-scale-uniform-dec > a::before {
+    content: "−";
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-scale-nonuniform > ul {
+    position: relative;
+    width: 4.25em;
+    height: 4.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-scale-nonuniform > ul > li.p-scale-x-inc {
+    left: 0em;
+    top: 0em;
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-scale-nonuniform > ul > li.p-scale-x-inc > a::before {
+    content: "+X";
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-scale-nonuniform > ul > li.p-scale-x-dec {
+    left: 0em;
+    top: 2.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-scale-nonuniform > ul > li.p-scale-x-dec > a::before {
+    content: "−X";
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-scale-nonuniform > ul > li.p-scale-y-inc {
+    left: 2.25em;
+    top: 0em;
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-scale-nonuniform > ul > li.p-scale-y-inc > a::before {
+    content: "+Y";
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-scale-nonuniform > ul > li.p-scale-y-dec {
+    left: 2.25em;
+    top: 2.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-2d > ul > li.p-scale-nonuniform > ul > li.p-scale-y-dec > a::before {
+    content: "−Y";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-rotate > ul {
+    position: relative;
+    width: 6.5em;
+    height: 4.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-rotate > ul > li.p-rotate-x-acw {
+    left: 2.25em;
+    top: 0em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-rotate > ul > li.p-rotate-x-acw > a::before {
+    content: "↑";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-rotate > ul > li.p-rotate-x-cw {
+    left: 2.25em;
+    top: 2.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-rotate > ul > li.p-rotate-x-cw > a::before {
+    content: "↓";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-rotate > ul > li.p-rotate-y-acw {
+    left: 0em;
+    top: 0em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-rotate > ul > li.p-rotate-y-acw > a::before {
+    content: "↺";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-rotate > ul > li.p-rotate-y-cw {
+    left: 4.5em;
+    top: 0em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-rotate > ul > li.p-rotate-y-cw > a::before {
+    content: "↻";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-rotate > ul > li.p-rotate-z-acw {
+    left: 0em;
+    top: 2.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-rotate > ul > li.p-rotate-z-acw > a::before {
+    content: "←";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-rotate > ul > li.p-rotate-z-cw {
+    left: 4.5em;
+    top: 2.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-rotate > ul > li.p-rotate-z-cw > a::before {
+    content: "→";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-translate > ul {
+    position: relative;
+    width: 6.5em;
+    height: 4.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-translate > ul > li.p-translate-x-pos {
+    left: 4.5em;
+    top: 2.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-translate > ul > li.p-translate-x-pos > a::before {
+    content: "→";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-translate > ul > li.p-translate-x-neg {
+    left: 0em;
+    top: 2.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-translate > ul > li.p-translate-x-neg > a::before {
+    content: "←";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-translate > ul > li.p-translate-y-pos {
+    left: 4.5em;
+    top: 0em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-translate > ul > li.p-translate-y-pos > a::before {
+    content: "↗";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-translate > ul > li.p-translate-y-neg {
+    left: 0em;
+    top: 0em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-translate > ul > li.p-translate-y-neg > a::before {
+    content: "↙";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-translate > ul > li.p-translate-z-pos {
+    left: 2.25em;
+    top: 0em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-translate > ul > li.p-translate-z-pos > a::before {
+    content: "↑";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-translate > ul > li.p-translate-z-neg {
+    left: 2.25em;
+    top: 2.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-translate > ul > li.p-translate-z-neg > a::before {
+    content: "↓";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-scale-uniform > ul {
+    position: relative;
+    width: 4.25em;
+    height: 2em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-scale-uniform > ul > li.p-scale-uniform-inc {
+    left: 0em;
+    top: 0em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-scale-uniform > ul > li.p-scale-uniform-inc > a::before {
+    content: "+";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-scale-uniform > ul > li.p-scale-uniform-dec {
+    left: 2.25em;
+    top: 0em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-scale-uniform > ul > li.p-scale-uniform-dec > a::before {
+    content: "−";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-scale-nonuniform > ul {
+    position: relative;
+    width: 6.5em;
+    height: 4.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-scale-nonuniform > ul > li.p-scale-x-inc {
+    left: 0em;
+    top: 0em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-scale-nonuniform > ul > li.p-scale-x-inc > a::before {
+    content: "+X";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-scale-nonuniform > ul > li.p-scale-x-dec {
+    left: 0em;
+    top: 2.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-scale-nonuniform > ul > li.p-scale-x-dec > a::before {
+    content: "−X";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-scale-nonuniform > ul > li.p-scale-y-inc {
+    left: 2.25em;
+    top: 0em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-scale-nonuniform > ul > li.p-scale-y-inc > a::before {
+    content: "+Y";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-scale-nonuniform > ul > li.p-scale-y-dec {
+    left: 2.25em;
+    top: 2.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-scale-nonuniform > ul > li.p-scale-y-dec > a::before {
+    content: "−Y";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-scale-nonuniform > ul > li.p-scale-z-inc {
+    left: 4.5em;
+    top: 0em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-scale-nonuniform > ul > li.p-scale-z-inc > a::before {
+    content: "+Z";
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-scale-nonuniform > ul > li.p-scale-z-dec {
+    left: 4.5em;
+    top: 2.25em;
+  }
+  .parameter.parameter-transform.parameter-transform-3d > ul > li.p-scale-nonuniform > ul > li.p-scale-z-dec > a::before {
+    content: "−Z";
+  }
+}
